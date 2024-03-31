@@ -7,9 +7,20 @@ services:
       context: .
       dockerfile: Services/Catalog/Catalog.API/Dockerfile
 
-  db:
+  catalog.db:
     image: postgres
     
     
+  basket.api:
+    image: ${DOCKER_REGISTRY-}basketapi
+    build:
+      context: .
+      dockerfile: Services/Basket/Basket.API/Dockerfile
+
+  basket.db:
+     image: postgres
+    
+
 volumes:
   catalog_db:
+  basket_db:
