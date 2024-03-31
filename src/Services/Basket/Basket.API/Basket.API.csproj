@@ -4,20 +4,24 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>9478de24-bbc0-4810-839c-2747c55a1c23</UserSecretsId>
+    <UserSecretsId>c46fb02c-5a53-4924-85a4-fdb914ca5703</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..</DockerfileContext>
-    <DockerComposeProjectPath>..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Carter" Version="8.0.0" />
-    <PackageReference Include="Marten" Version="7.5.0" />
+	  <PackageReference Include="Marten" Version="7.5.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\BuildingBlocks\BuildingBlocks.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Basket\GetBasket\" />
+    <Folder Include="Basket\DeleteBasket\" />
   </ItemGroup>
 
 </Project>
